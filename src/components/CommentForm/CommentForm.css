@@ -1,0 +1,24 @@
+.comment-form label,
+.comment-form input {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    box-sizing:border-box;
+    font-size: 1.2rem;
+}
+
+.comment-form button {
+    height: 3rem;
+    width: 12rem;
+    /* margin-top: 20px; */
+    /* padding: 9px 14px; */
+    border-radius: 2.2rem;
+    color: white;
+    background-color: purple;
+    font-weight: bold;
+    font-size: 1.5rem;    
+    margin: 5rem;
+    cursor: pointer; 
+}
