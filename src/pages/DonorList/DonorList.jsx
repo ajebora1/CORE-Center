@@ -1,45 +1,11 @@
-// export default function DonorList() {
-//     return (
-//         <div className="container">
-//         <h1 className="DonorList">This is the List of Donors</h1>
-//         </div>
-//     )
-// }
+import DonorCard from '../../pages/DonorCard/DonorCard'
 
-
-import { useEffect, useState } from 'react';
-import { getAll } from '../../utilities/donors-api';
-
-export default function Comments(user) {
-    const [users, setUsers] = useState([{
-        name: '',
-        email: '',
-        usertype: '',
-        groupmembership: '',
-    }])
-
-    useEffect(() => {
-        fetch("/donors").then(res => {
-            if(res.ok) {
-                return res.json()
-
-            }
-        }).then(jsonRes => getAll(jsonRes));
-    })
-
+export default function DonorList() {
     return (
-
         <div className="container">
-            <h1>Donors</h1>
-            {users.map(user =>
-            <div key={user.id}>
-                <h1>{user.name}</h1>
-                <p>{user.email}</p>
-                <p>{user.usertype}</p>
-                <p>{user.groupmembership}</p>
-            </div>    
-            )}
+            <h1>Donors List</h1>
+            <DonorCard />
         </div>
-
+ 
     )
 }
