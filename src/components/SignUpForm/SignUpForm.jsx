@@ -52,7 +52,7 @@ export default class SignUpForm extends Component {
         email: '',
         password: '',
         confirm: '',
-        usertype: '',
+        usertype: 'Recipient',
         error: ''
       };
 
@@ -77,29 +77,37 @@ export default class SignUpForm extends Component {
     }
 }
 
-  render() {
+render() {
   const disable = this.state.password !== this.state.confirm;
   return (
     <div>
-      <div className="form-container">
-        <form autoComplete="off" onSubmit={this.handleSubmit}>
-          <label>Name</label>
-          <input type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
-          <label>Email</label>
-          <input type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
-          <label>Type of User</label>
-          <select value={this.state.usertype} name="usertype" onChange={this.handleChange}>
+      <div>
+        <form className="row g-3" autoComplete="off" onSubmit={this.handleSubmit}>
+        <div className="col-md-6">
+          <label className="col-sm-2 col-form-label">Name</label>
+          <input className="form-control" type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
+          </div>
+          <div className="col-md-6">
+          <label className="col-sm-2 col-form-label">Email</label>
+          <input className="form-control" type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
+          </div>
+          <div className="col-md-6">
+          <label className="form-label">Password</label>
+          <input className="form-control" type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
+          </div>
+          <div className="col-md-6">
+          <label className="col-sm-2 col-form-label">Confirm</label>
+          <input className="form-control"  type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
+          </div>
+          <div className="col-md-6">
+          <label className="col-sm-2 col-form-label">User Type</label>
+          <select className="form-select" id="inlineFormSelectPref" value={this.state.usertype} name="usertype" onChange={this.handleChange}>
           <option value="Donor">Donor</option>
           <option value="Recipient">Recipient</option>
           <option value="PayForward">PayForward</option>
-        </select>
-          {/* <label>Type  of User</label>
-          <input type="usertype" name="usertype" value={this.state.usertype} onChange={this.handleChange} required /> */}
-          <label>Password</label>
-          <input type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
-          <label>Confirm</label>
-          <input type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
-          <button type="submit" disabled={disable}>SIGN UP</button>
+          </select>
+          </div>
+           <button className="btn btn-primary" type="submit" disabled={disable}>SIGN UP</button>
         </form>
       </div>
       <p className="error-message">&nbsp;{this.state.error}</p>

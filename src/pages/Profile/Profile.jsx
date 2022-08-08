@@ -1,9 +1,10 @@
 import "./Profile.css";
 import CommentForm from "../../components/CommentForm/CommentForm"; 
+import Comments from "../../pages/Comments/Comments"
 
 export default function Profile({user}) {
     return (
-        <>
+        <div className="container">
         <h1 className="Profile">This is my Profile Page</h1>
         
         <div>
@@ -13,8 +14,10 @@ export default function Profile({user}) {
             </div>
               <h2>{user.name}</h2>
               <hr />
+              <Comments />
+              <hr />
               <CommentForm />
         </div>
-        </>
+        </div>
     )
 }

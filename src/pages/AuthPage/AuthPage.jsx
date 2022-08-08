@@ -13,7 +13,7 @@ export default function AuthPage({setUser}) {
     return (
         <main>
         <h1>AuthPage</h1>
-        <button onClick={handleClick}>
+        <button className="btn btn-primary" onClick={handleClick}>
             { toggleForm ? "Log In Form" : "Sign Up Form" }
         </button>
          {   

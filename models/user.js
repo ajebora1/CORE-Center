@@ -23,6 +23,10 @@ const userSchema = new Schema({
     type: String,
     enum: ['Donor', 'Recipient', 'PayForward'],
     required : true 
+},
+groupmembership: {
+  type: Boolean,
+  default : true 
 }
 }, {
   timestamps: true,
