@@ -1,10 +1,9 @@
-import CommentForm from "../../components/CommentForm/CommentForm";
 import * as commentsAPI from '../../utilities/comments-api'
 import { useState, useEffect } from "react"
 
 export default function Comments({user}) {
     const [comments, setComments] = useState([{
-        amount: '',
+        title: '',
         comment: '',
     }])
      
@@ -18,10 +17,10 @@ export default function Comments({user}) {
 
     return (
             <div className="container">
-                <h1>My Story and Amount Needed</h1>
+                <h1>My Updates</h1>
                 {comments.map(comment =>
                 <div key={comment.id}>
-                    <h1>{comment.amount}</h1>
+                    <h1>{comment.title}</h1>
                     <p>{comment.comment}</p>
                 </div>    
                 )}

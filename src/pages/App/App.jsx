@@ -9,6 +9,7 @@ import RecipientList from '../RecipientList/RecipientList';
 import RecipientDetail from '../RecipientDetail/RecipientDetail'
 import PayForwardList from '../PayForwardList/PayForwardList';
 import PayForwardDetail from '../PayForwardDetail/PayForwardDetail';
+import FormPages from '../FormPages/FormPages';
 import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
 
@@ -26,9 +27,10 @@ export default function App() {
          <Route path="/donors/:donorName" element={<DonorDetail />} />
          <Route path="/recipient/:recipientName" element={<RecipientDetail />} />
          <Route path="/payforward/:payforwardName" element={<PayForwardDetail />} />
-         <Route path="/donors" element={<DonorList />} />
-         <Route path="/recipients" element={<RecipientList />} />
-         <Route path="/payforward" element={<PayForwardList />} />
+         <Route path="/donors" element={<DonorList user={user}/>} />
+         <Route path="/recipients" element={<RecipientList user={user}/>} />
+         <Route path="/payforward" element={<PayForwardList user={user}/>} />
+         <Route path="/formpages" element={<FormPages user={user} setUser={setUser}/>} />
        </Routes>
     </>
         : 
