@@ -1,19 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const donorSchema = new Schema({
-    amountpaid: Number,
-    paidto: String,
-    usertype: {
-        type: String,
-        default: 'Donor'
-    },
+const profileSchema = new Schema({
+    usertype: String,
     groupmembership: {
         type: Boolean,
         default : true 
-    },
+      },
     picture: String,
-    mystory: String,
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
@@ -22,5 +16,4 @@ const donorSchema = new Schema({
     timestamps: true
 })
 
-
-module.exports = mongoose.model('Donor', donorSchema);
+module.exports = mongoose.model('Profile', profileSchema);

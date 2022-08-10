@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
-    amount: Number,
+    title: String,
     comment: String,
     user: {
         type: Schema.Types.ObjectId,

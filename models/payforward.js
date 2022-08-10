@@ -14,6 +14,7 @@ const payforwardSchema = new Schema({
         type: Boolean,
         default : true 
       },
+    mystory: String,
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',

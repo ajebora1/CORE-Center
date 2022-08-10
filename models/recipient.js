@@ -16,6 +16,7 @@ const recipientSchema = new Schema({
         type: String,
         default: 'Recipient'
     },
+    mystory: String,
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',

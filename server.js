@@ -23,8 +23,11 @@ const app = express();
  app.use(require('./config/checkToken'));
 
  app.use('/api/users', require('./routes/api/users'));
- app.use('/api/comments', require('./routes/api/comments'))
- app.use('/api/donors', require('./routes/api/donors'))
+ app.use('/api/comments', require('./routes/api/comments'));
+ app.use('/api/donors', require('./routes/api/donors'));
+ app.use('/api/recipients', require('./routes/api/recipients'));
+ app.use('/api/payforwards', require('./routes/api/payforwards'));
+//  app.use('/api/formpagess', require('./routes/api/formpages'))
 
  app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));

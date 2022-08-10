@@ -18,16 +18,7 @@ const userSchema = new Schema({
     trim: true,
     minLength: 3,
     required: true
-  },
-  usertype: {
-    type: String,
-    enum: ['Donor', 'Recipient', 'PayForward'],
-    required : true 
-},
-groupmembership: {
-  type: Boolean,
-  default : true 
-}
+  }
 }, {
   timestamps: true,
   toJSON: {
