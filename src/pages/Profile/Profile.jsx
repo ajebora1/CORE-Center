@@ -14,7 +14,7 @@ export default function Profile({user}) {
             </div>
               <h2>{user.name}</h2>
               <hr />
-              <Comments />
+              <Comments user={user}/>
               <hr />
               <CommentForm />
         </div>

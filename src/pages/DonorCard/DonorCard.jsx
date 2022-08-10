@@ -9,14 +9,14 @@ export default function DonorCard({user}) {
         groupmembership: '',
     }])
 
-    useEffect(() => {
-        fetch("/donors").then(res => {
-            if(res.ok) {
-                return res.json()
-
-            }
-        }).then(jsonRes => getAll(jsonRes));
-    })
+    useEffect(function () {
+        async function fetchComments() {
+          const userComment = await commentsAPI.getAllDonors();
+          setComments(userComment);
+        }
+        fetchComments();
+      }, []);
+    getAllDonors
 
     return (
 

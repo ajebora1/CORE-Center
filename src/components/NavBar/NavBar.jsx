@@ -17,7 +17,7 @@ export default function NavBar({user, setUser}) {
             <h4><Link className='link' to="/donors">Donors List</Link></h4>
             <h4><Link className='link' to="/recipients">Recipients List</Link></h4>
             <h4><Link className='link' to="/payforward">PayForward List</Link></h4>
-            <span>Welcome, {user.name}</span>
+            <span className='link'>Welcome, {user.name}</span>
             <h4><Link className='link' to="" onClick={handleLogOut}>Log Out</Link></h4>
         </nav>
     )

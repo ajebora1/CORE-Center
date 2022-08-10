@@ -1,6 +1,8 @@
+import * as commentsAPI from '../../utilities/comments-api'
+
 import { useState } from 'react';
 
-export default function CommentForm() {
+export default function CommentForm({ user }) {
     const [commentdata, setCommentdata] = useState({
         amount: '',
         comment: ''
@@ -20,15 +22,21 @@ export default function CommentForm() {
             )
     }
 
-
-    async function handleSubmit(evt) {
+    function handleSubmit(evt) {
         evt.preventDefault();
-        try {
-          } catch {
-            setError('Log In Failed - Try Again');
-          }
-          resetForm();
-        }
+        commentsAPI.createComments(commentdata);
+         resetForm()
+    }       
+
+    // async function handleSubmit(evt) {
+    //     evt.preventDefault();
+    //      try {
+
+    //       } catch {
+    //         setError('Log In Failed - Try Again');
+    //       }
+    //       resetForm();
+    //     }
         
 
     return (
@@ -42,7 +50,7 @@ export default function CommentForm() {
                 <div className="form-group">
                     <textarea onChange={handleChange} name="comment" value={commentdata.comment} autoComplete="off" className="form-control" placeholder="Comment"></textarea>
                 </div>
-                <button className="btn btn-lg btn-info">Submit Comment</button>
+                <button  className="btn btn-lg btn-info">Submit Comment</button>
             </form>
             <p className="error-message">&nbsp;{error}</p>
         </div>

@@ -2,10 +2,10 @@ import sendRequest from './send-request';
 
 const BASE_URL = '/api/donors';
 
-export function getAll() {
+export function getAllDonors() {
   return sendRequest(BASE_URL);
 }
 
-export function getById(id) {
+export function getAllDonorsById(id) {
   return sendRequest(`${BASE_URL}/${id}`);
 }

@@ -5,12 +5,20 @@ module.exports = {
   show
 };
 
-async function index(req, res) {
-  const donors = await User.find({ 'usertype': 'Donor'});
-  res.json(donors);
-}
+// async function index(req, res) {
+//   const donors = await User.find({ 'usertype': 'Donor'});
+//   res.json(donors);
+// }
 
 async function show(req, res) {
   const donorDetail = await User.findById(req.params.id);
   res.json(donorDetail);
 }
+
+async function index(req, res) {
+  const donors = await User.find({})
+  console.log(req);
+  res.json(donors);
+}
+
+
