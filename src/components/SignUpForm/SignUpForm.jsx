@@ -100,12 +100,12 @@ render() {
           <input className="form-control"  type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
           </div>
           <div className="col-md-6">
-          <label className="col-sm-2 col-form-label">User Type</label>
+          {/* <label className="col-sm-2 col-form-label">User Type</label>
           <select className="form-select" id="inlineFormSelectPref" value={this.state.usertype} name="usertype" onChange={this.handleChange}>
           <option value="Donor">Donor</option>
           <option value="Recipient">Recipient</option>
           <option value="PayForward">PayForward</option>
-          </select>
+          </select> */}
           </div>
            <button className="btn btn-primary" type="submit" disabled={disable}>SIGN UP</button>
         </form>
