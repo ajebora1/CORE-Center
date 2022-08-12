@@ -1,8 +1,16 @@
-import * as recipientsAPI from '../../utilities/recipients-api'
-import { useState, useEffect } from "react"
+import './Recipients.css';
+import * as recipientsAPI from '../../utilities/recipients-api';
+import { useState, useEffect } from "react";
+import { useNavigate} from "react-router-dom";
 
 export default function Recipients({user}) {
-    console.log('I see this section')
+
+    const navigate = useNavigate();
+
+    const navigateToRecipientDetails = (recipientID) => {
+        navigate(`/recipient/${recipientID}`);
+    }
+
     const [recipients, setRecipients] = useState([{
         programlength: '',
         programtype: '',
@@ -16,28 +24,29 @@ export default function Recipients({user}) {
         async function fetchAllRecipients() {
           const userRecipient = await recipientsAPI.getAllRecipients();
           setRecipients(userRecipient);
-          console.log(userRecipient)
         }
             fetchAllRecipients();
       }, []);
 
     return (
-            <div className="container">
+
+            <div>
                 {recipients.map(recipient =>
-                <div key={recipient.id}>
-                    <h1>{recipient.programlength}</h1>
+                  <div className="container-sm" key={recipient.id}>
+                    {/* <h1>{recipient.programlength}</h1>
                     <p>{recipient.programtype}</p>
-                    <p>{recipient.amountneeded}</p>
+                    <p>${recipient.amountneeded}</p> */}
                     <div>
-                     <img src={recipient.picture} />
+                     <img style = {{ width:"16rem", height:"16rem", borderRadius:"8rem" }} src={recipient.picture} />
                      </div>
                     <p>{recipient.user.name}</p>
                     <p>{recipient.user.email}</p>
                     <h1>My Story</h1>
                     <p>{recipient.mystory}</p>
+                    <button className="btn btn-lg btn-info" onClick={() => {navigateToRecipientDetails(recipient._id)}}>Donate to {recipient.user.name}</button>
                 </div>    
                 )}
             </div>
-    
+   
         )
     }

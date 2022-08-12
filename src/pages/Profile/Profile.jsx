@@ -2,7 +2,7 @@ import "./Profile.css";
 import {useNavigate} from "react-router-dom";
 import Comments from "../../pages/Comments/Comments"
 import RecipientCard from "../../pages/RecipientCard/RecipientCard"
-import Donors from "../Donors/Donors";
+import DonorCard from "../DonorCard/DonorCard";
 import PayForwardCard from "../../pages/PayForwardCard/PayForwardCard";
 
 export default function Profile({user}) {
@@ -28,9 +28,10 @@ export default function Profile({user}) {
               <hr />
               <Comments user={user}/>
               <hr />
-              <Donors user={user}/>
+              <DonorCard user={user}/>
               <hr />
               <PayForwardCard user={user}/>
+              <hr />
         </div>
         </div>
     )

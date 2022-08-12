@@ -1,36 +1,30 @@
-import { useEffect, useState } from 'react';
-import { getAll } from '../../utilities/donors-api';
+import * as donorsAPI from '../../utilities/donors-api'
+import { useState, useEffect } from "react"
 
 export default function DonorCard({user}) {
-    const [users, setUsers] = useState([{
-        name: '',
-        email: '',
-        usertype: '',
-        groupmembership: '',
+    const [donors, setDonors] = useState([{
+        picture: '',
+        mystory: '',
     }])
-
+     
     useEffect(function () {
-        async function fetchComments() {
-          const userComment = await commentsAPI.getAllDonors();
-          setComments(userComment);
+        async function fetchDonors(userId) {
+          const userDonor = await donorsAPI.getAllUserDonors(userId);
+          setDonors(userDonor);
         }
-        fetchComments();
+        fetchDonors(user._id);
       }, []);
-    getAllDonors
 
     return (
-
-        <div className="container">
-            <h1>Donors</h1>
-            {users.map(user =>
-            <div key={user.id}>
-                <h1>{user.name}</h1>
-                <p>{user.email}</p>
-                <p>{user.usertype}</p>
-                <p>{user.groupmembership}</p>
-            </div>    
-            )}
-        </div>
-
-    )
-}
+            <div className="container">
+                <h1>Donor</h1>
+                {donors.map(donor =>
+                <div key={donor.id}>
+                    {/* <p>{donor.picture}</p> */}
+                    <p>{donor.mystory}</p>
+                </div>    
+                )}
+            </div>
+    
+        )
+    }

@@ -1,24 +1,23 @@
-const User = require('../../models/user');
+const Donor = require('../../models/donor');
 
 module.exports = {
-  index,
-  show
+    create,
+    show,
+    index,
 };
 
-// async function index(req, res) {
-//   const donors = await User.find({ 'usertype': 'Donor'});
-//   res.json(donors);
-// }
+  async function create(req, res) {
+  req.body.user = req.user._id;
+  const newDonor = await Donor.create(req.body);
+  res.json(newDonor);
+};
 
 async function show(req, res) {
-  const donorDetail = await User.findById(req.params.id);
-  res.json(donorDetail);
-}
-
-async function index(req, res) {
-  const donors = await User.find({})
-  console.log(req);
+  const donors = await Donor.find({user: req.params.userId})
   res.json(donors);
 }
 
-
+async function index(req, res) {
+  const indexdonors = await Donor.find({}).populate({path: 'user', select:[ 'name', 'email' ]});
+  res.json(indexdonors);
+}

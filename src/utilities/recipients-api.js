@@ -12,3 +12,7 @@ export async function createRecipients(recipientdata) {
   export function getAllRecipients() {
     return sendRequest(BASE_URL);
   } 
+
+  export function getOneRecipient(recipientID) {
+    return sendRequest(`${BASE_URL}/${recipientID}`);
+  }  

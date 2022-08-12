@@ -1,0 +1,8 @@
+import DonationCard from '../../pages/DonationCard/DonationCard';
+
+
+export default function DonationList() {
+    return (
+       <DonationCard />
+    )
+}

@@ -1,26 +1,32 @@
-import * as donorsAPI from '../../utilities/donors-api'
-import { useState, useEffect } from "react"
+import './Donors.css';
+import * as donorsAPI from '../../utilities/donors-api';
+import { useState, useEffect } from "react";
 
 export default function Donors({user}) {
     const [donors, setDonors] = useState([{
         picture: '',
         mystory: '',
+        user: {name: '', email: '',}
     }])
      
     useEffect(function () {
-        async function fetchDonors(userId) {
-          const userDonor = await donorsAPI.getAllUserDonors(userId);
+        async function fetchAllDonors() {
+          const userDonor = await donorsAPI.getAllDonors();
           setDonors(userDonor);
         }
-        fetchDonors(user._id);
+            fetchAllDonors();
       }, []);
 
     return (
-            <div className="container">
-                <h1>Donor</h1>
+            <div>
                 {donors.map(donor =>
-                <div key={donor.id}>
-                    {/* <p>{donor.picture}</p> */}
+                <div className="container-sm" key={donor.id}>
+                    <div>
+                     <img style = {{ width:"16rem", height:"16rem", borderRadius:"8rem" }} src={donor.picture} />
+                     </div>
+                    <p>{donor.user.name}</p>
+                    <p>{donor.user.email}</p>
+                    <h1>My Story</h1>
                     <p>{donor.mystory}</p>
                 </div>    
                 )}

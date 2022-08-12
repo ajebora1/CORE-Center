@@ -9,3 +9,14 @@ export async function createComments(commentdata) {
   export function getAllUserComments(userId) {
     return sendRequest(`${BASE_URL}/user/${userId}`);
   }  
+
+  export function updateOneComment(commentID) {
+    return sendRequest(`${BASE_URL}/${commentID}`);
+  } 
+  export function deleteOneComment(commentID) {
+    return sendRequest(`${BASE_URL}/${commentID}`);
+  } 
+
+  // export function deleteOneComment(userId,commentID) {
+  //   return sendRequest(`${BASE_URL}/${userId}/${commentID}`);
+  // } 
