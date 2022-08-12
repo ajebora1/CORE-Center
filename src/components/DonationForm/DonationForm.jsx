@@ -1,13 +1,16 @@
 import * as donationsAPI from '../../utilities/donations-api'
 
 import { useState } from 'react';
+import { useParams } from 'react-router-dom';
 
-export default function DonationForm(donor, recipient) {
+
+export default function DonationForm({user}) {
+    const {id} = useParams()
     const [donationdata, setDonationdata] = useState({
         donationamount: '',
         donationtype: '',
-        // donatedto: '',
-        // donatedfrom: '',
+        donor: user._id,
+        recipient: id
     })
     const [error, setError] = useState('');
 
@@ -20,6 +23,8 @@ export default function DonationForm(donor, recipient) {
         setDonationdata({
             donationamount: '',
             donationtype: '',
+            donor: user._id,
+            recipient: id
         }
             )
     }

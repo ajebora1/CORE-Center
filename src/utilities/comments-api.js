@@ -10,11 +10,11 @@ export async function createComments(commentdata) {
     return sendRequest(`${BASE_URL}/user/${userId}`);
   }  
 
-  export function updateOneComment(commentID) {
-    return sendRequest(`${BASE_URL}/${commentID}`);
+ export  async function updateOneComment(commentID, data) {
+    return await sendRequest(`${BASE_URL}/${commentID}`, 'PUT', data);
   } 
-  export function deleteOneComment(commentID) {
-    return sendRequest(`${BASE_URL}/${commentID}`);
+  export  function deleteOneComment(commentID) {
+    return sendRequest(`${BASE_URL}/${commentID}`, 'DELETE');
   } 
 
   // export function deleteOneComment(userId,commentID) {

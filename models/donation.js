@@ -7,9 +7,6 @@ const donationSchema = new Schema({
        type: String,
        enum: ['Full-Payment', 'Incremental-Payment']
     },
-    donatedto:  String,
-
-    donatedfrom: String,
 
     donor: {
         type: Schema.Types.ObjectId,
