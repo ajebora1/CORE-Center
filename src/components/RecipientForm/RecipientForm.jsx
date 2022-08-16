@@ -45,7 +45,7 @@ export default function RecipientForm({ user }) {
 
     return (
         <div className="container">
-            <h1 className="text-center text-purple-900">Update Recipient Info</h1>
+            <h1 className="text-center text-xl mb-2 font-bold text-purple-900">Update Recipient's Info</h1>
             <form className="mt-6" onSubmit={(evt) => {
                 handleSubmit(evt);
                 navigateToProfile()
@@ -82,7 +82,7 @@ export default function RecipientForm({ user }) {
                 <label className="block text-sm font-semibold text-gray-800 text-center">Your Story</label>
                     <textarea onChange={handleChange} name="mystory" value={recipientdata.mystory} autoComplete="off" className="block w-full px-12 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Tell Your Story"></textarea>
                 </div>
-                <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">Submit Update</button>
+                <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">Submit Recipient's Update</button>
             </form>
             <p className="error-message">&nbsp;{error}</p>
         </div>

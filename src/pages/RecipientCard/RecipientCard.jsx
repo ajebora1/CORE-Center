@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 
 export default function Recipients({user}) {
     const [recipients, setRecipients] = useState([{
+        coursename: '',
         programlength: '',
         programtype: '',
         amountneeded: '',
@@ -22,12 +23,13 @@ export default function Recipients({user}) {
             <div className="container">
                 {recipients.map(recipient =>
                 <div key={recipient.id}>
-                    <h1>{recipient.programlength}</h1>
-                    <p>{recipient.programtype}</p>
-                    <p>${recipient.amountneeded}</p>
+                    <p className="font-bold text-xl mb-2">{recipient.coursename} Training</p>
+                    <h1>{recipient.programlength} Program</h1>
+                    <p>{recipient.programtype} Course</p>
+                    <p>${recipient.amountneeded} Needed for the Program</p>
                     <h1 className="text-center text-purple-900 text-xl font-bold">My Story</h1>
                     {/* <p>{recipient.picture}</p> */}
-                    <p>{recipient.mystory}</p>
+                    <p className="text-base text-center">{recipient.mystory}</p>
                 </div>    
                 )}
             </div>

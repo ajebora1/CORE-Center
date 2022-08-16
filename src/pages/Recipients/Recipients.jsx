@@ -33,7 +33,7 @@ export default function Recipients({user}) {
                 {recipients.map(recipient =>
                   <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5" key={recipient.id}>
                     <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
-                     <img className="w-full rounded-full"  src={recipient.picture} />
+                     <img className="w-1/2 rounded-full"  src={recipient.picture} alt="recipient" />
                      </div>
                      <div class="p-6 flex flex-col justify-start">
                     <h5 className="font-bold text-xl mb-2">{recipient.user.name}</h5>

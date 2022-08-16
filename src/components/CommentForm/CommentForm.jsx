@@ -37,7 +37,7 @@ export default function CommentForm({ user }) {
 
     return (
         <div className="container">
-            <h1 className="text-center text-purple-900">Create Comment Page</h1>
+            <h1 className="text-center text-xl mb-2 font-bold text-purple-900">Create Comment Page</h1>
             <form className="mt-6" onSubmit={(evt) => {
                 handleSubmit(evt);
                 navigateToProfile()

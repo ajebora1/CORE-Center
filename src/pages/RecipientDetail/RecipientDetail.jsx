@@ -31,11 +31,12 @@ export default function RecipientDetail() {
                     <img className="w-full rounded-full"  src={recipient1.picture} />
             </div>
             <div class="p-6 flex flex-col justify-start">
-                 <h1 className="font-bold text-xl mb-2">{recipient1.coursename}</h1>
-                    <p className="font-bold text-xl mb-2">{recipient1.programlength}</p>
-                    <p className="font-bold text-xl mb-2">{recipient1.programtype}</p>
+                 <h1 className="font-bold text-xl mb-2">Interested in {recipient1.coursename} Training</h1>
+                    <p className="font-bold text-xl mb-2">The Program will run for {recipient1.programlength}</p>
+                    <p className="font-bold text-xl mb-2">It is a {recipient1.programtype} Training</p>
+                    <p className="font-bold text-xl mb-2">${recipient1.amountneeded} Needed to complete the Program</p>
                     <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600" 
-                    onClick={() => {paymentpage(recipient1._id)}}>Donate ${recipient1.amountneeded}</button>
+                    onClick={() => {paymentpage(recipient1._id)}}>Donate towards ${recipient1.amountneeded} mark</button>
             </div>
          </div>   
       </div>

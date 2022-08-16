@@ -21,7 +21,7 @@ export default function DonorCard({user}) {
                 {donors.map(donor =>
                 <div key={donor.id}>
                     {/* <p>{donor.picture}</p> */}
-                    <p>{donor.mystory}</p>
+                    <p className="text-base text-center">{donor.mystory}</p>
                 </div>    
                 )}
             </div>

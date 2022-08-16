@@ -22,20 +22,3 @@ export default function NavBar({user, setUser}) {
         </nav>
     )
 }
-
-//     return (
-//         <nav className='navbar bg-dark container'>
-//             <Link to="/profile">Profile</Link>
-//             &nbsp;&nbsp; | &nbsp;
-//             <Link to="/donors">Donors List</Link>
-//             &nbsp;&nbsp; | &nbsp;
-//             <Link to="/recipients">Recipients List</Link>
-//             &nbsp;&nbsp; | &nbsp;
-//             <Link to="/payforward">PayForward List</Link>
-//             &nbsp; | &nbsp;
-//             <span>Welcome, {user.name}</span>
-//             &nbsp; | &nbsp;
-//             &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
-//         </nav>
-//     )
-// }

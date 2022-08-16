@@ -20,7 +20,7 @@ export default function Payforwards({user}) {
                 <h1 className="text-center text-purple-900 text-xl font-bold">Payforward</h1>
                 {payforwards.map(payforward =>
                 <div key={payforward.id}>
-                    <p>{payforward.mystory}</p>
+                    <p className="text-base text-center">{payforward.mystory}</p>
                 </div>    
                 )}
             </div>

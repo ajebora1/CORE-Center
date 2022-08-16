@@ -29,7 +29,7 @@ export default function Donors({user}) {
         {donors.map(donor =>
         <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5" key={donor.id}>
             <div className="rounded overflow-hidden shadow-lg">
-             <img className="w-full rounded-full"  src={donor.picture} alt="profile"/>
+             <img className="w-1/2 rounded-full"  src={donor.picture} alt="profile"/>
              </div>
              <div className="px-6 py-4">
                 <p className="font-bold text-xl mb-2">{donor.user.name}</p>

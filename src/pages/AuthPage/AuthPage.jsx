@@ -12,7 +12,7 @@ export default function AuthPage({setUser}) {
 
     return (
         <main>
-        <h1 className="text-center">AuthPage</h1>
+        {/* <h1 className="text-center">AuthPage</h1> */}
         <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600" onClick={handleClick}>
             { toggleForm ? "Log In Form" : "Sign Up Form" }
         </button>
