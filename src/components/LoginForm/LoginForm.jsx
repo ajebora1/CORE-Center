@@ -35,10 +35,10 @@ export default function LoginForm({ setUser }) {
     <div className="container px-2 py-1 h-fulll">
     <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
       <div className="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
-        <img src="https://i.imgur.com/zxsG12G.jpg"/>
-        <div class="underline decoration-wavy text-purple"> We Can Change One And Get A Ripple Effect</div>
+        <img src="https://i.imgur.com/zxsG12G.jpg" alt="home1"/> 
+        <div class="underline decoration-wavy text-center font-bold text-xl mb-2 text-purple-900"> We Can Change One And Get A Ripple Effect</div>
         <img
-          src="https://i.imgur.com/53HIvsQ.jpg "
+          src="https://i.imgur.com/53HIvsQ.jpg" alt="home"
           className="rounded-full"
         />
       </div>

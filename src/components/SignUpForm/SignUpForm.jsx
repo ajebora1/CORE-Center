@@ -40,19 +40,16 @@ render() {
     <div className="container px-2 py-1 h-full">
     <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
       <div className="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
-       {/* <img  className="rounded-full" src="https://i.imgur.com/rdPS8TH.jpg" style={{ width:"8rem", height:"8rem", borderRadius:"8rem" }}/>  */}
-       <img src="https://i.imgur.com/zxsG12G.jpg"/>
-        <div class="underline decoration-wavy text-purple"> We Can Change One And Get A Ripple Effect</div>
+            <img src="https://i.imgur.com/zxsG12G.jpg" alt="signup"/>
+        <div class="underline decoration-wavy text-center font-bold text-xl mb-2 text-purple-900"> We Can Change One And Get A Ripple Effect</div>
         <img
-          src="https://i.imgur.com/53HIvsQ.jpg"
+          src="https://i.imgur.com/53HIvsQ.jpg" alt="signup1"
           className="rounded-full"
         />
       </div>
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
       <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl shadow-rose-600/40 ring ring-2 ring-purple-600 lg:max-w-xl">
-      {/* <h1 className="text-3xl font-semibold text-center text-purple-700 underline uppercase decoration-wavy">
-      </h1> */}
-        <form className="mt-6" autoComplete="off" onSubmit={this.handleSubmit}>
+            <form className="mt-6" autoComplete="off" onSubmit={this.handleSubmit}>
         <div className="mb-2">
           <label className="block text-sm font-semibold text-gray-800">Name</label>
           <input className="block w-full px-20 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
