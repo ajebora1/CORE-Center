@@ -25,14 +25,19 @@ export default function RecipientDetail() {
 
 
     return (
-            <div className="container">
-                    <img style = {{ width:"16rem", height:"16rem", borderRadius:"8rem" }} src={recipient1.picture} />
-                    <h1>{recipient1.programlength}</h1>
-                    <p>{recipient1.programtype}</p>
-                    <button className="btn btn-lg btn-info" onClick={() => {paymentpage(recipient1._id)}}>Donate ${recipient1.amountneeded}</button>
+      <div className="object-cover bg-[url('https://i.imgur.com/y6allgB.jpg')]" >
+            <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+            <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
+                    <img className="w-full rounded-full"  src={recipient1.picture} />
             </div>
-
-            
-    
+            <div class="p-6 flex flex-col justify-start">
+                 <h1 className="font-bold text-xl mb-2">{recipient1.coursename}</h1>
+                    <p className="font-bold text-xl mb-2">{recipient1.programlength}</p>
+                    <p className="font-bold text-xl mb-2">{recipient1.programtype}</p>
+                    <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600" 
+                    onClick={() => {paymentpage(recipient1._id)}}>Donate ${recipient1.amountneeded}</button>
+            </div>
+         </div>   
+      </div>
         )
     }

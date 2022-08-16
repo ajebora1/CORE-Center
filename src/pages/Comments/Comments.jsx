@@ -39,7 +39,7 @@ export default function Comments({user, comment}) {
 
     return (
             <div className="container">
-                <h1>My Updates</h1>
+                <h1 className="text-center text-purple-900 text-xl font-bold">My Updates</h1>
                 {comments.map(comment =>
                 <CommentCard comment={comment}/>
                 )}

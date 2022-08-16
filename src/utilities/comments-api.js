@@ -16,7 +16,3 @@ export async function createComments(commentdata) {
   export  function deleteOneComment(commentID) {
     return sendRequest(`${BASE_URL}/${commentID}`, 'DELETE');
   } 
-
-  // export function deleteOneComment(userId,commentID) {
-  //   return sendRequest(`${BASE_URL}/${userId}/${commentID}`);
-  // } 

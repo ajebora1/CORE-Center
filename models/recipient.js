@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const recipientSchema = new Schema({
+    coursename: {
+        type: String,
+        enum: ['Software Development', 'Cyber Security', 'Database Administration', 'Network Administration']
+    },
     amountneeded: Number,
     programlength: {
        type: String,
@@ -20,6 +24,14 @@ const recipientSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
+    }, 
+    donor: {
+        type: Schema.Types.ObjectId,
+        ref: 'Donor',
+    }, 
+    payforward: {
+        type: Schema.Types.ObjectId,
+        ref: 'PayForward',
     }, 
 },{
     timestamps: true

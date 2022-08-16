@@ -24,8 +24,8 @@ export default function Recipients({user}) {
                 <div key={recipient.id}>
                     <h1>{recipient.programlength}</h1>
                     <p>{recipient.programtype}</p>
-                    <p>{recipient.amountneeded}</p>
-                    <h1>My Story</h1>
+                    <p>${recipient.amountneeded}</p>
+                    <h1 className="text-center text-purple-900 text-xl font-bold">My Story</h1>
                     {/* <p>{recipient.picture}</p> */}
                     <p>{recipient.mystory}</p>
                 </div>    

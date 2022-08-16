@@ -13,3 +13,7 @@ export async function createDonors(donordata) {
   export function getAllDonors() {
     return sendRequest(BASE_URL);
   } 
+
+  export function getOneDonor(donorID) {
+    return sendRequest(`${BASE_URL}/${donorID}`);
+  } 

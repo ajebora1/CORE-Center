@@ -4,6 +4,7 @@ module.exports = {
     create,
     show,
     index,
+    detail,
 };
 
   async function create(req, res) {
@@ -21,3 +22,10 @@ async function index(req, res) {
   const indexdonors = await Donor.find({}).populate({path: 'user', select:[ 'name', 'email' ]});
   res.json(indexdonors);
 }
+
+async function detail(req, res) {
+  const onedonor = await Donor.findById(req.params.donorId)
+  res.json(onedonor);
+}
+
+

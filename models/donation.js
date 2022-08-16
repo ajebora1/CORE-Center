@@ -7,14 +7,17 @@ const donationSchema = new Schema({
        type: String,
        enum: ['Full-Payment', 'Incremental-Payment']
     },
-
+    // user: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'User',
+    // }, 
     donor: {
         type: Schema.Types.ObjectId,
-        ref: 'Donors',
+        ref: 'Donor',
     }, 
     recipient: {
         type: Schema.Types.ObjectId,
-        ref: 'Recipients',
+        ref: 'Recipient',
     }, 
 },{
     timestamps: true

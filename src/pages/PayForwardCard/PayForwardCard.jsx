@@ -17,10 +17,9 @@ export default function Payforwards({user}) {
 
     return (
             <div className="container">
-                <h1>Payforward</h1>
+                <h1 className="text-center text-purple-900 text-xl font-bold">Payforward</h1>
                 {payforwards.map(payforward =>
                 <div key={payforward.id}>
-                    {/* <p>{payforward.picture}</p> */}
                     <p>{payforward.mystory}</p>
                 </div>    
                 )}

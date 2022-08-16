@@ -17,7 +17,7 @@ export default function DonorCard({user}) {
 
     return (
             <div className="container">
-                <h1>Donor</h1>
+                <h1 className="text-center text-purple-900 text-xl font-bold">Donor</h1>
                 {donors.map(donor =>
                 <div key={donor.id}>
                     {/* <p>{donor.picture}</p> */}

@@ -19,7 +19,7 @@ export default function CommentDelete({comment}) {
 
     return (
             <div className="container">
-                <h1>My Updates</h1>
+                <h1 font-bold text-xl mb-2 text-purple-900>My Updates</h1>
                 {comment1.map(comment =>
                 <div key={comment.id}>
                     <h1>{comment.title}</h1>

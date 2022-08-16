@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
-// delete this later
 const cors = require('cors');
 
 // const { application } = require('express');
@@ -14,7 +13,6 @@ const app = express();
 
  app.use(logger('dev'));
  app.use(express.json());
- //delete later
  app.use(cors());
 
  app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
@@ -27,6 +25,7 @@ const app = express();
  app.use('/api/donors', require('./routes/api/donors'));
  app.use('/api/recipients', require('./routes/api/recipients'));
  app.use('/api/payforwards', require('./routes/api/payforwards'));
+ app.use('/api/donations', require('./routes/api/donations'));
 //  app.use('/api/formpagess', require('./routes/api/formpages'))
 
  app.get('/*', function(req, res) {

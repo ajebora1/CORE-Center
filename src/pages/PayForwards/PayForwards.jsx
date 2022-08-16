@@ -1,4 +1,3 @@
-import './PayForwards.css';
 import * as payforwardsAPI from '../../utilities/payforwards-api';
 import { useState, useEffect } from "react";
 
@@ -18,19 +17,23 @@ export default function PayForwards({user}) {
       }, []);
 
     return (
+        <div className="object-cover bg-[url('https://i.imgur.com/y6allgB.jpg')]" >
             <div>
                 {payforwards.map(payforward =>
-                <div className="container-sm" key={payforward.id}>
-                    <div>
-                     <img style = {{ width:"16rem", height:"16rem", borderRadius:"8rem" }} src={payforward.picture} />
+                <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5" key={payforward.id}>
+                    <div className="rounded overflow-hidden shadow-lg">
+                     <img className="w-full rounded-full" src={payforward.picture} />
                      </div>
-                    <p>{payforward.user.name}</p>
-                    <p>{payforward.user.email}</p>
-                    <h1>My Story</h1>
-                    <p>{payforward.mystory}</p>
+                     <div className="px-6 py-4">
+                    <p className="font-bold text-xl mb-2">{payforward.user.name}</p>
+                    <p className="font-bold text-xl mb-2">{payforward.user.email}</p>
+                    <h1 className="font-bold text-xl mb-2 text-purple-900">My Story</h1>
+                    <p className="text-xl mb-2">{payforward.mystory}</p>
+                    </div>
                 </div>    
                 )}
             </div>
+        </div>
     
         )
     }

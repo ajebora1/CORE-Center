@@ -1,51 +1,6 @@
 import { Component, useState } from "react";
 import {signUp} from "../../utilities/users-service";
 
-
-// export default function SignUpForm() {
-//   const [formData, setFormData] = useState({
-//     name: '',
-//     email: '',
-//     password: '',
-//     confirm: '',
-//     error: ''
-//   })
-
-//   function handleChange(evt) {
-//     setFormData({
-//       ...formData,
-//       [evt.target.name]: evt.target.value,
-//       error: ''
-//     })
-//   }
-
-//   function handleSubmit(evt) {
-//     evt.preventDefault();
-//     alert(JSON.stringify(formData));
-//   }
-
-//   const disable = formData.password !== formData.confirm;
-
-//   return (
-//     <div>
-//       <div className="form-container">
-//         <form autoComplete="off" onSubmit={handleSubmit}>
-//           <label>Name</label>
-//           <input type="text" name="name" value={formData.name} onChange={handleChange} required />
-//           <label>Email</label>
-//           <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-//           <label>Password</label>
-//           <input type="password" name="password" value={formData.password} onChange={handleChange} required />
-//           <label>Confirm</label>
-//           <input type="password" name="confirm" value={formData.confirm} onChange={handleChange} required />
-//           <button type="submit" disabled={disable}>SIGN UP</button>
-//         </form>
-//       </div>
-//       <p className="error-message">&nbsp;{formData.error}</p>
-//     </div>
-//   );
-// }
-
 export default class SignUpForm extends Component {
     state = {
         name: '',
@@ -80,40 +35,52 @@ export default class SignUpForm extends Component {
 render() {
   const disable = this.state.password !== this.state.confirm;
   return (
-    <div>
-      <div>
-        <form className="row g-3" autoComplete="off" onSubmit={this.handleSubmit}>
-        <div className="col-md-6">
-          <label className="col-sm-2 col-form-label">Name</label>
-          <input className="form-control" type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
+    <div className="object-cover bg-[url('https://i.imgur.com/y6allgB.jpg')]" >
+    <section className="h-screen">
+    <div className="container px-2 py-1 h-full">
+    <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
+      <div className="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
+       {/* <img  className="rounded-full" src="https://i.imgur.com/rdPS8TH.jpg" style={{ width:"8rem", height:"8rem", borderRadius:"8rem" }}/>  */}
+       <img src="https://i.imgur.com/zxsG12G.jpg"/>
+        <div class="underline decoration-wavy text-purple"> We Can Change One And Get A Ripple Effect</div>
+        <img
+          src="https://i.imgur.com/53HIvsQ.jpg"
+          className="rounded-full"
+        />
+      </div>
+    <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
+      <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl shadow-rose-600/40 ring ring-2 ring-purple-600 lg:max-w-xl">
+      {/* <h1 className="text-3xl font-semibold text-center text-purple-700 underline uppercase decoration-wavy">
+      </h1> */}
+        <form className="mt-6" autoComplete="off" onSubmit={this.handleSubmit}>
+        <div className="mb-2">
+          <label className="block text-sm font-semibold text-gray-800">Name</label>
+          <input className="block w-full px-20 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40" type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
           </div>
-          <div className="col-md-6">
-          <label className="col-sm-2 col-form-label">Email</label>
-          <input className="form-control" type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
+          <div className="mb-2">
+          <label className="block text-sm font-semibold text-gray-800">Email</label>
+          <input className="block w-full px-20 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40" type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
           </div>
-          <div className="col-md-6">
+          <div className="mb-2">
           <label className="form-label">Password</label>
-          <input className="form-control" type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
+          <input className="block w-full px-20 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40" type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
           </div>
-          <div className="col-md-6">
-          <label className="col-sm-2 col-form-label">Confirm</label>
-          <input className="form-control"  type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
+          <div className="mb-2">
+          <label className="block text-sm font-semibold text-gray-800">Confirm</label>
+          <input className="block w-full px-20 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"   type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
           </div>
-          <div className="col-md-6">
-          {/* <label className="col-sm-2 col-form-label">User Type</label>
-          <select className="form-select" id="inlineFormSelectPref" value={this.state.usertype} name="usertype" onChange={this.handleChange}>
-          <option value="Donor">Donor</option>
-          <option value="Recipient">Recipient</option>
-          <option value="PayForward">PayForward</option>
-          </select> */}
+          <div className="mb-2">
           </div>
-           <button className="btn btn-primary" type="submit" disabled={disable}>SIGN UP</button>
-        </form>
+           <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600" type="submit" disabled={disable}>SIGN UP</button>
+        </form>     
       </div>
       <p className="error-message">&nbsp;{this.state.error}</p>
+      </div>
     </div>
+    </div>
+  </section>
+  </div>
   );
 }
 
 }
-
