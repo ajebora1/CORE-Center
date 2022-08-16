@@ -1,10 +1,13 @@
-![CORE-Center](https://github.com/ajebora1/CORE-Center/blob/main/mainpage.png)
+<!-- ![CORE-Center](https://github.com/ajebora1/CORE-Center/blob/main/mainpage.png)
 ![CORE-Center](https://github.com/ajebora1/CORE-Center/blob/main/welcomepage.png)
 ![CORE-Center](https://github.com/ajebora1/CORE-Center/blob/main/profilepage.png)
-![CORE-Center](https://github.com/ajebora1/CORE-Center/blob/main/donorpage.png)
+![CORE-Center](https://github.com/ajebora1/CORE-Center/blob/main/donorpage.png) -->
 # CORE-Center (Change One Ripple Effect Center)
 CORE-Center is a charity organization dertermined to help people archive their dreams by linking them to
 a donor that will donate towards their education.
+
+<img src="https://github.com/ajebora1/CORE-Center/blob/main/mainpage.png" width=50% height=50%>
+
 ## Wireframe of the Website: [Click here](https://lucid.app/lucidchart/d8983acc-eb30-41bf-b280-f4fe71632813/edit?beaconFlowId=F8E45A6D6EDEE965&invitationId=inv_8718f797-a112-41de-920d-e51e1a2e889c&page=0_0#) to view the WireFrame.
 
 ## Project Plan: [Click Here](https://trello.com/b/i9JgC6Oh/project-plan) to view the project Plan.
