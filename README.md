@@ -1,7 +1,3 @@
-<!-- ![CORE-Center](https://github.com/ajebora1/CORE-Center/blob/main/mainpage.png)
-![CORE-Center](https://github.com/ajebora1/CORE-Center/blob/main/welcomepage.png)
-![CORE-Center](https://github.com/ajebora1/CORE-Center/blob/main/profilepage.png)
-![CORE-Center](https://github.com/ajebora1/CORE-Center/blob/main/donorpage.png) -->
 # CORE-Center (Change One Ripple Effect Center)
 CORE-Center is a charity organization dertermined to help people archive their dreams by linking them to
 a donor that will donate towards their education.
@@ -23,7 +19,7 @@ a donor that will donate towards their education.
 ### Wireframe of the Website: [Click here](https://lucid.app/lucidchart/d8983acc-eb30-41bf-b280-f4fe71632813/edit?beaconFlowId=F8E45A6D6EDEE965&invitationId=inv_8718f797-a112-41de-920d-e51e1a2e889c&page=0_0#) to view the WireFrame.
 
 ### Project Plan: [Click Here](https://trello.com/b/i9JgC6Oh/project-plan) to view the project Plan.
-### User Story: [Click Here](https://trello.com/b/NCcF2Tlf/change-agent-user-story) to view the user story Plan
+### User Story: [Click Here](https://trello.com/b/NCcF2Tlf/change-agent-user-story) to view the user story.
 
 ### Data Model: [Click Here](https://lucid.app/lucidchart/6504857b-b10e-496d-9030-bc44bcbe589a/edit?invitationId=inv_6a65ab45-b966-48f5-a2ab-326be89a3e55&page=0_0#) to view the data model.
 ### Technology Used (MERN)
