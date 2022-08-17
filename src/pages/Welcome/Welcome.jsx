@@ -10,6 +10,7 @@ export default function Welcome() {
 
     return (
     <div>
+        <div className="object-cover bg-[url('https://i.imgur.com/y6allgB.jpg')]" >
         <section class="hero container max-w-screen-lg mx-auto pb-10 flex justify-center">
         <img class="object-cover h-20 w-96" src="https://i.imgur.com/8AyKdz6.jpg" alt="welcome" />
         </section>
@@ -37,6 +38,7 @@ export default function Welcome() {
         </section>
         <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600"
         onClick={navigateToProfile}>Go to Profile Page</button>
+        </div>
     </div>
     )
 }
